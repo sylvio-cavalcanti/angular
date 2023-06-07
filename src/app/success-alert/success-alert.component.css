@@ -1,0 +1,10 @@
+.alert-container {
+    border: 1px solid green;
+    padding: 5px;
+    border-radius: 3px;
+    width: 300px;
+    text-align: center;
+}
+.alert-text {
+    color: green;
+}
