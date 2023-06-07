@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent {
+  allowNewServer = false;
+  serverCreationStatus = 'No server was created...';
 
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true
+      console.log('allowNewServer: True');
+    }, 2000);
+  }
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created.';
+  }
 }
