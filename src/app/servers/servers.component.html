@@ -1,3 +1,6 @@
-<p>servers works!</p>
+<label for="server-name"> Type the Server Name</label>
+<input id="server-name" type="text" (input)="onUpdateServerName($event)" class="form-control mb-4 mt-2 w-50">
+<span style="display: block; margin-bottom: 10px;">Server Name: {{ serverName }}</span>
+
 <button (click)="onCreateServer()" [disabled]="!allowNewServer" class="btn btn-primary mb-4">Add Server</button>
 <p>{{ serverCreationStatus }}</p>
