@@ -1,7 +1,11 @@
 <!-- Rendering a dynamic Id -->
 
 <!-- Using camelCase -->
-<p [ngStyle]="{backgroundColor: getColor()}">{{ 'Server' }} with ID {{ serverId }}  is {{ getServerStatus() }}</p>
-<!-- Using single quotes -->
-<p [ngStyle]="{'background-color': getColor()}">{{ 'Server' }} with ID {{ serverId }}  is {{ getServerStatus() }}</p>
+<p 
+  [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{online: serverStatus === 'online'}"
+> 
+  {{ 'Server' }} with ID {{ serverId }}  is {{ getServerStatus() }}
+</p>
+
 
