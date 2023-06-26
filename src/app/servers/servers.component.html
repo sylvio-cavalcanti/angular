@@ -15,7 +15,13 @@
 <button (click)="onCreateServer()" [disabled]="!allowNewServer" class="btn btn-primary mb-4">Add Server</button>
 <!-- <p>{{ serverCreationStatus }}</p> -->
 
-<p *ngIf="serverCreated; else noServer">Server was created, server name is {{ serverName }}</p>
+<p *ngIf="serverCreated; else noServer">A Server was created...</p>
 <ng-template #noServer> <!-- #noServer is local reference (it is a marker) -->
     <p>No server was created!</p>
 </ng-template>
+
+<div *ngFor="let server of servers" class="servers-list">
+    <span>{{server}}</span>
+</div>
+
+<app-server *ngFor="let server of servers"/>   
