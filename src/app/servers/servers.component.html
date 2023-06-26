@@ -20,8 +20,8 @@
     <p>No server was created!</p>
 </ng-template>
 
-<div *ngFor="let server of servers" class="servers-list">
-    <span>{{server}}</span>
+<div *ngFor="let server of servers; let i = index" class="servers-list">
+    <span>{{ i + 1 }} - {{server}}</span>
 </div>
 
 <app-server *ngFor="let server of servers"/>   
